@@ -15,8 +15,12 @@ nav{
     color: black;
 }
 
-.center-content{
+.category-active{
+    border: 2px solid blue;
+}
+
+/* .center-content{
     height: 100%;
     display: flex;
     
-}
+} */

@@ -66,7 +66,9 @@
   
   /* HTML Elements */
   const sectionCenter = document.querySelector('.section-center');
-  const filterBtns = document.querySelector('.filter-btn');
+  const btnContainer = document.getElementsByClassName("btn-container");
+  const btnGroup = btnContainer[0].children
+  // debugger
   const knowledgeBtn = document.getElementById("Knowledge");
   const learningBtn = document.getElementById("Learning");
   const experienceBtn = document.getElementById("Experience");
@@ -74,20 +76,19 @@
   /* EVENT LISTENERS */
   knowledgeBtn.addEventListener("click", function() {
     const item = getWisdom("Knowledge");
-    // console.log(item.category)
+    setActive(knowledgeBtn)
     displayMenuItem(item)
-    
   })
   
   learningBtn.addEventListener("click", function() {
     const item = getWisdom("Learning");
-    console.log(item.category)
+    setActive(learningBtn)
     displayMenuItem(item)
   })
   
   experienceBtn.addEventListener("click", function() {
     const item = getWisdom("Experience");
-    console.log(item.category)
+    setActive(experienceBtn)
     displayMenuItem(item)
   })
 
@@ -119,4 +120,12 @@ function getWisdom(category){
    sectionCenter.innerHTML = html  
   }//End displayMenuItem
 
-  
+  function setActive(activeBtn) {
+    activeBtn.classList.add("category-active");
+    for (var i = 0; i < btnGroup.length; i++) {
+      //remove active everywhere else
+      if(btnGroup[i].id !== activeBtn.id){
+        btnGroup[i].classList.remove("category-active")
+      }
+    } 
+  }
