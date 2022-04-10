@@ -1,0 +1,22 @@
+body { 
+    height: 100vh;
+    width: 100%;
+    
+}
+
+nav{
+    background-color: darkgrey;
+    
+}
+
+.logotxt{
+    text-align: center;
+    text-shadow: 10px;
+    color: black;
+}
+
+.center-content{
+    height: 100%;
+    display: flex;
+    
+}

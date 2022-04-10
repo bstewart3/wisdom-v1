@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "dependencies": {
+    "read-file": "^0.2.0",
+    "write-file": "^1.0.0"
+  },
+  "name": "wisdom-project",
+  "version": "1.0.0",
+  "description": "Advice",
+  "main": "index.html",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
