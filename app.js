@@ -64,34 +64,34 @@
     },
   ];
   
+  /* HTML Elements */
   const sectionCenter = document.querySelector('.section-center');
   const filterBtns = document.querySelector('.filter-btn');
   const knowledgeBtn = document.getElementById("Knowledge");
   const learningBtn = document.getElementById("Learning");
   const experienceBtn = document.getElementById("Experience");
 
-  //load items
-  //  window.addEventListener("onload", function() {
-  //     displayMenuItem(menu)
-  //   })
+  /* EVENT LISTENERS */
+  knowledgeBtn.addEventListener("click", function() {
+    const item = getWisdom("Knowledge");
+    // console.log(item.category)
+    displayMenuItem(item)
+    
+  })
+  
+  learningBtn.addEventListener("click", function() {
+    const item = getWisdom("Learning");
+    console.log(item.category)
+    displayMenuItem(item)
+  })
+  
+  experienceBtn.addEventListener("click", function() {
+    const item = getWisdom("Experience");
+    console.log(item.category)
+    displayMenuItem(item)
+  })
 
-    knowledgeBtn.addEventListener("click", function() {
-      const item = getWisdom("Knowledge");
-      // console.log(item.category)
-      displayMenuItem(item)
-      
-    })
-    learningBtn.addEventListener("click", function() {
-      const item = getWisdom("Learning");
-      console.log(item.category)
-      displayMenuItem(item)
-    })
-    experienceBtn.addEventListener("click", function() {
-      const item = getWisdom("Experience");
-      console.log(item.category)
-      displayMenuItem(item)
-    })
-
+/* MAIN FUNCS */
 function getWisdom(category){
   const menuItems = menu.filter(item => {
     return item.category == category
@@ -102,10 +102,6 @@ function getWisdom(category){
   ]
   return item
 }
-
-
-
-
 
   function displayMenuItem(item){
     const html =  ` <article class="menu-item">
